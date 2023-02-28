@@ -102,3 +102,42 @@ button {
   width: 80%;
   margin: 3.2rem auto;
 }
+
+.fa-regular {
+  display: inline-block;
+  background-color: white;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(---grey);
+}
+
+.thumbnails {
+  margin-left: 4.3rem;
+}
+
+.thumbnails img {
+  width: 75px;
+  height: 40px;
+  /* padding: 0 0.5rem 0 0.5rem; */
+  margin-top: 2rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.formOnly a p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(---grey);
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-left: 0.7rem;
+  display: inline-block;
+}
+
+.formOnly a p:hover {
+  color: #816bef;
+}
