@@ -97,10 +97,14 @@ button {
   /* width: 400px; */
   height: 50px;
   border-radius: 30px;
-  /* background-color: rgb(#01dade #816bef #fa02ff); */
   background: linear-gradient(to right, #01dade 10%, #816bef 70%, #fa02ff 100%);
   width: 80%;
   margin: 3.2rem auto;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(to left, #fa02ff 10%, #816bef 70%, #01dade 100%);
 }
 
 .fa-regular {
@@ -121,7 +125,7 @@ button {
 
 .thumbnails img {
   width: 75px;
-  height: 40px;
+  height: 42px;
   /* padding: 0 0.5rem 0 0.5rem; */
   margin-top: 2rem;
   padding: 0 1rem 0 1rem;
