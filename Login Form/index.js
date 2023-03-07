@@ -1,7 +1,10 @@
 "use strict"
 
 const placeholder = document.querySelectorAll("input")
-console.log(placeholder)
+const valuesOfInputs = document.querySelectorAll("input")
+const loginBtn = document.querySelector("button")
+
+const collectedData = []
 
 // This won't work, because document.querySelectorAll returns a nodeList which is an array
 // so we can't assign eventListener to all of them that way
@@ -25,3 +28,18 @@ for (let i = 0; i < placeholder.length; i++) {
 //     input.placeholder = ""
 //   })
 // }
+
+const dataCollector = () => {
+  for (let i = 0; i < valuesOfInputs.length; i++) {
+    collectedData.push(valuesOfInputs[i].value)
+  }
+  console.log(
+    `Username: ${collectedData[0]}\n
+    Password: ${collectedData[1]}\n
+    Email: ${collectedData[2]}`
+  )
+}
+
+loginBtn.addEventListener("click", function () {
+  dataCollector()
+})
