@@ -1,9 +1,9 @@
 "use strict"
 
+const form = document.querySelector("form")
 const placeholder = document.querySelectorAll("input")
 const valuesOfInputs = document.querySelectorAll("input")
 const loginBtn = document.querySelector("button")
-const form = document.querySelector("form")
 
 // This won't work, because document.querySelectorAll returns a nodeList which is an array
 // so we can't assign eventListener to all of them that way
