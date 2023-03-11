@@ -3,8 +3,7 @@
 const placeholder = document.querySelectorAll("input")
 const valuesOfInputs = document.querySelectorAll("input")
 const loginBtn = document.querySelector("button")
-
-const collectedData = []
+const form = document.querySelector("form")
 
 // This won't work, because document.querySelectorAll returns a nodeList which is an array
 // so we can't assign eventListener to all of them that way
@@ -29,17 +28,25 @@ for (let i = 0; i < placeholder.length; i++) {
 //   })
 // }
 
-const dataCollector = () => {
-  for (let i = 0; i < valuesOfInputs.length; i++) {
-    collectedData.push(valuesOfInputs[i].value)
-  }
-  console.log(
-    `Username: ${collectedData[0]}\n
-    Password: ${collectedData[1]}\n
-    Email: ${collectedData[2]}`
-  )
-}
+// const dataCollector = () => {
+//   for (let i = 0; i < valuesOfInputs.length; i++) {
+//     collectedData.push(valuesOfInputs[i].value)
+//   }
+//   console.log(
+//     `Username: ${collectedData[0]}\n
+//     Password: ${collectedData[1]}\n
+//     Email: ${collectedData[2]}`
+//   )
+// }
 
-loginBtn.addEventListener("click", function () {
-  dataCollector()
+// loginBtn.addEventListener("click", function () {
+//   dataCollector()
+// })
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+  const collectedData = new FormData(form)
+  for (const data of collectedData) {
+    console.log(data)
+  }
 })
