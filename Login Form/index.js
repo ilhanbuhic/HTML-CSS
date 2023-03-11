@@ -28,25 +28,27 @@ for (let i = 0; i < placeholder.length; i++) {
 //   })
 // }
 
-// const dataCollector = () => {
-//   for (let i = 0; i < valuesOfInputs.length; i++) {
-//     collectedData.push(valuesOfInputs[i].value)
-//   }
-//   console.log(
-//     `Username: ${collectedData[0]}\n
-//     Password: ${collectedData[1]}\n
-//     Email: ${collectedData[2]}`
-//   )
-// }
-
-// loginBtn.addEventListener("click", function () {
-//   dataCollector()
-// })
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault()
-  const collectedData = new FormData(form)
-  for (const data of collectedData) {
-    console.log(data)
+const collectedData = []
+const dataCollector = () => {
+  for (let i = 0; i < valuesOfInputs.length; i++) {
+    collectedData.push(valuesOfInputs[i].value)
   }
+  console.log(
+    `Username: ${collectedData[0]}
+    Password: ${collectedData[1]}
+    Email: ${collectedData[2]}`
+  )
+}
+
+loginBtn.addEventListener("click", function () {
+  dataCollector()
 })
+
+// We could also use this code, if I created button into a form tag
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault()
+//   const collectedData = new FormData(form)
+//   for (const data of collectedData) {
+//     console.log(data)
+//   }
+// })
