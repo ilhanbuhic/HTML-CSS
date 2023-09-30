@@ -17,6 +17,7 @@
   box-sizing: border-box;
   text-decoration: none;
   text-transform: none;
+  list-style: none;
   transition: 0.3s linear;
 }
 html {
@@ -181,7 +182,7 @@ html {
 }
 
 .about-home {
-  color: #3f6d69;
+  color: var(--smain-clr);
   display: flex;
   justify-content: space-between;
   padding: 15% 5% 0;
